@@ -1,3 +1,3 @@
 ---
-license: cc-by-4.0
+license: bsd-3-clause
 ---
