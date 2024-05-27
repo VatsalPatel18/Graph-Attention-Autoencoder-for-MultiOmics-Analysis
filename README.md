@@ -10,7 +10,7 @@ This repository contains the codebase for our research project titled "Graph Att
 - `models/`: This directory includes the models developed during the study.
 - `results/`: Contains output from the models including figures and result summaries.
 - `graph_autoencoder.py`: Implements the graph autoencoder model.
-- `HyperParameter Search.py`: Script for hyperparameter tuning of models.
+- `HyperParameterSearch.py`: Script for hyperparameter tuning of models.
 - `train_GAE.py`: Main training script for the Graph Attention Network.
 - `LICENSE`: License file for the project.
 
@@ -18,6 +18,26 @@ This repository contains the codebase for our research project titled "Graph Att
 
 The code provided in this repository is intended to support the reproducibility of our research findings. By leveraging graph neural networks, particularly graph attention mechanisms, we aim to derive insightful biomarkers and identify survival groups in cancer genomics. This integration of heterogeneous data sources aims to provide a comprehensive view of the genomic landscape to improve patient stratification and treatment outcomes.
 
+## Model Details
+
+- **Architecture:** GATv2Encoder, GATv2Decoder
+- **Training Data:** Multi-omics data types including gene expression, mutations, methylation, and copy number alterations.
+- **Usage:** Instructions on how to use the model.
+
+## How to Use
+
+```python
+from torch_geometric.data import DataLoader
+from model import GraphAutoencoder
+
+# Load model
+model_path = 'path_to_model.pth'
+gae = GraphAutoencoder(in_channels=17, edge_attr_channels=1, out_channels=1, original_feature_size=17)
+gae.gae.load_state_dict(torch.load(model_path))
+gae.gae.eval()
+
+# Use the model
+# Example usage
 ## Getting Started
 
 To use this repository:
