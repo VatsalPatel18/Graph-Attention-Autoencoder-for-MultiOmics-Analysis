@@ -1,3 +1,6 @@
 data/temp_MultiOmics_Graph_Network_Data.pth
-data/
 *.pyc
+data/graph_data_dictN.pth
+data/hnsc.edges.npy
+data/survival.hnsc_data.csv
+
