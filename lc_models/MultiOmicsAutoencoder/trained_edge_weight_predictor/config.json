@@ -1,0 +1,22 @@
+{
+  "architectures": [
+    "EdgeWeightPredictorModel"
+  ],
+  "edge_attr_channels": 1,
+  "edge_decoder_activations": [
+    "ReLU",
+    "ReLU"
+  ],
+  "edge_decoder_hidden_sizes": [
+    128,
+    64
+  ],
+  "in_channels": 17,
+  "learning_rate": 0.01,
+  "model_type": "omics-graph-network",
+  "num_layers": 2,
+  "original_feature_size": 17,
+  "out_channels": 1,
+  "torch_dtype": "float32",
+  "transformers_version": "4.32.1"
+}
