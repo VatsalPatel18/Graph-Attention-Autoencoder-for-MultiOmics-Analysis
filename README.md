@@ -1,4 +1,4 @@
-# MultiOmics Graph Attention Network
+# Graph Attention Autoencoder for MultiOmics Integration, Risk Stratification and Biomarker Identification in Cancer
 
 ## Overview
 
