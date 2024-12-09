@@ -4,6 +4,10 @@
 
 This repository contains the codebase for our research project titled "Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification", submitted to ICML 2024. The project explores the application of Graph Attention Networks to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, primarily focusing on head and neck squamous cell carcinoma (HNSCC).
 
+## License
+This software is licensed under a Custom License Agreement.  
+© 2024 Vatsal Patel. All rights reserved.
+
 ## Repository Structure
 
 - `data/`: Folder containing necessary datasets (Note: Large data files like .pth are not tracked due to size constraints).
@@ -16,7 +20,6 @@ This repository contains the codebase for our research project titled "Graph Att
 - `HyperParameterSearch.py`: Script for hyperparameter tuning of models.
 >>>>>>> recovery-branch
 - `train_GAE.py`: Main training script for the Graph Attention Network.
-- `LICENSE`: License file for the project.
 
 ## Purpose
 
