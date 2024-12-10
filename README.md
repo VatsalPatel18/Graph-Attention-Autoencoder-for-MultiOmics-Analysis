@@ -1,5 +1,7 @@
 # Graph Attention Autoencoder for MultiOmics Integration, Risk Stratification, and Biomarker Identification in Cancer
 
+**This software is licensed under a [Custom License Agreement](LICENSE). © 2024 Vatsal Patel. All rights reserved.**
+
 ## Overview
 
 This repository contains the codebase for our research project titled **"Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification"**, submitted to ICML 2024. The project leverages advanced Graph Attention Networks (GATs) to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, with a primary focus on head and neck squamous cell carcinoma (HNSCC).
