@@ -57,7 +57,7 @@ Each gene is represented as a single node with a 17-dimensional feature vector c
   - Binary classification (high-risk vs. lower-risk) AUC ~0.98.
 
 ### Results
-<img src="images/results.png" alt="Key Outcomes" width="700"/>
+<img src="images/results.png" alt="Key Outcomes" width="350"/>
 
 ### Key Outcomes
 - **Integrated Multi-omics**: Combines gene expression, mutations, CNA, and methylation into a unified latent representation.
@@ -124,7 +124,7 @@ For further information or queries, please contact:
 
 If you use this repository in your research, please cite as follows:
 
-> Patel, V. P., & Biswas, N. K. (2024). Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification. Submitted to ICML 2024.
+> Patel, V. P., & Biswas, N. K. (2024). Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification. Zenodo. https://doi.org/10.5281/zenodo.14357409
 
 ---
 
