@@ -2,39 +2,36 @@
 
 ## Overview
 
-This repository contains the codebase for our research project titled **"Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification"**. The project leverages advanced Graph Attention Networks (GATs) to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, with a primary focus on head and neck squamous cell carcinoma (HNSCC).
+This repository contains the codebase for our research project titled **"Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification"**, submitted to ICML 2024. The project leverages advanced Graph Attention Networks (GATs) to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, with a primary focus on head and neck squamous cell carcinoma (HNSCC).
 
 ## Key Insights and Methodology
 
-![Multi-omics Integration](images/multiomics_integration.png)
-![Methodology](images/steps_of_methdology.png)
-
 ### Data and Input Representation
+
+#### Multi-omics Integration
+<img src="images/multiomics_integration.png" alt="Multi-omics Integration" width="700"/>
 
 #### Cohort and Cancer Type:
 - **Patients**: Derived from the TCGA-HNSCC dataset.
 - **Samples**: Approximately 430 patient samples.
 
 #### Multi-omics Features per Gene (Node Features):
-
-![Gene Node Processing](images/gene_node.png)
-![Construction of Gene Networks](images/construction_of_patient_gene_networks.png)
-
-
 Each gene is represented as a single node with a 17-dimensional feature vector comprising:
 - **Gene Expression**: Standardized and normalized to [0,1].
 - **Copy Number Alteration (CNA)**: Encoded from -2 to 2, linearly mapped to [0,1].
 - **Mutations**: Binary encodings for mutations, including frame shift, in-frame changes, missense, nonsense, silent, and other mutation types.
 - **Methylation Patterns**: Values from six genomic regions (1st exon, 3’UTR, 5’UTR, gene body, TSS1500, TSS200).
 
-#### Gene Set and Graph Construction:
-- **Gene Set**: Based on the "Cancer Hallmark" gene set (2,784 genes).
-- **Edges**: Weighted edges indicate shared hallmark pathways between genes.
-- **Graph Size**: Each graph has 2,784 nodes and approximately 3.6 million edges.
+#### Gene Node Processing
+<img src="images/gene_node.png" alt="Gene Node Processing" width="700"/>
+
+#### Construction of Patient-Specific Gene Networks
+<img src="images/construction_of_patient_gene_networks.png" alt="Construction of Gene Networks" width="700"/>
 
 ### Methodology Overview
 
-#### Graph Attention Autoencoder (Unsupervised Stage):
+#### Graph Attention Autoencoder (Unsupervised Stage)
+<img src="images/steps_of_methdology.png" alt="Steps of Methodology" width="700"/>
 
 **Encoder**:
 - Employs GATv2Conv layers to reduce the 17D features into a 1D latent embedding per gene.
@@ -51,19 +48,21 @@ Each gene is represented as a single node with a 17-dimensional feature vector c
 - Reduces multi-omics data into a single latent dimension per gene per patient (2,784 latent features per patient).
 - Achieves a high cosine similarity (≥0.8) between input and reconstructed features.
 
-#### Feature Extraction and Patient Clustering (Post-Autoencoder):
-![Attention Analysis and Gene Selection](images/attention_analysis_and_gene_selection.png)
+### Feature Extraction and Patient Clustering
+<img src="images/attention_analysis_and_gene_selection.png" alt="Attention Analysis and Gene Selection" width="700"/>
 
 - **Latent Representation**: Each patient is represented by a 2,784-dimensional latent vector.
 - **Clustering**: K-means clustering identifies initial groups, later refined to three distinct survival-linked clusters based on statistical testing.
 
-#### Risk Stratification and Biomarker Identification:
+### Risk Stratification and Biomarker Identification
 - **Attention Analysis**: High-attention edges reveal significant gene-gene interactions across patients.
 - **Gene Selection**: Attention-based filtering identifies 70 genes strongly associated with distinct survival outcomes.
 - **Predictive Modeling**: Models trained on these genes achieve:
   - Multi-class classification AUC > 0.9.
   - Binary classification (high-risk vs. lower-risk) AUC ~0.98.
-![Key outcomes](images/results.png)
+
+### Results
+<img src="images/results.png" alt="Key Outcomes" width="700"/>
 
 ### Key Outcomes
 - **Integrated Multi-omics**: Combines gene expression, mutations, CNA, and methylation into a unified latent representation.
