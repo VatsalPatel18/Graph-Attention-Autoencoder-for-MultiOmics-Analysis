@@ -6,10 +6,8 @@ This repository contains the codebase for our research project titled **"Graph A
 
 ## Key Insights and Methodology
 
-### Data and Input Representation
-
-#### Multi-omics Integration
 <img src="images/multiomics_integration.png" alt="Multi-omics Integration" width="700"/>
+<img src="images/steps_of_methdology.png" alt="Steps of Methodology" width="700"/>
 
 #### Cohort and Cancer Type:
 - **Patients**: Derived from the TCGA-HNSCC dataset.
@@ -29,9 +27,6 @@ Each gene is represented as a single node with a 17-dimensional feature vector c
 <img src="images/construction_of_patient_gene_networks.png" alt="Construction of Gene Networks" width="700"/>
 
 ### Methodology Overview
-
-#### Graph Attention Autoencoder (Unsupervised Stage)
-<img src="images/steps_of_methdology.png" alt="Steps of Methodology" width="700"/>
 
 **Encoder**:
 - Employs GATv2Conv layers to reduce the 17D features into a 1D latent embedding per gene.
