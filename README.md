@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the codebase for our research project titled **"Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification"**, submitted to ICML 2024. The project leverages advanced Graph Attention Networks (GATs) to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, with a primary focus on head and neck squamous cell carcinoma (HNSCC).
+This repository contains the codebase for our research project titled **"Graph Attention Networks for Biomedical Insights: MultiOmics Integration for Risk Stratification and Biomarker Identification"**. The project leverages advanced Graph Attention Networks (GATs) to integrate and analyze multiomic data types, such as gene expression, mutations, methylation, and copy number alterations, with a primary focus on head and neck squamous cell carcinoma (HNSCC).
 
 ## Key Insights and Methodology
 
